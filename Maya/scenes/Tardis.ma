@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Tardis.ma
-//Last modified: Fri, Feb 05, 2021 12:39:13 PM
+//Last modified: Mon, Feb 08, 2021 01:40:48 PM
 //Codeset: 1252
 requires maya "2020";
 requires "mtoa" "4.0.0";
@@ -10,7 +10,7 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
-fileInfo "UUID" "AB8EFFF0-4DA7-2ED6-ABBE-85846959E866";
+fileInfo "UUID" "C7864012-410F-73DA-F0F4-E8BA4C4530ED";
 createNode transform -s -n "persp";
 	rename -uid "5CD52AA3-49F3-C7E8-725E-2682D7BA7BD2";
 	setAttr ".v" no;
@@ -76,6 +76,19 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
+createNode transform -n "pCube1";
+	rename -uid "35F8867E-4100-102E-966C-478AE031795D";
+createNode mesh -n "pCubeShape1" -p "pCube1";
+	rename -uid "3002E2FA-4C73-45B1-BBC2-B09CA41A4A64";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "97939251-41EA-757F-7D46-A9AE3B68BE72";
 	setAttr -s 2 ".lnk";
@@ -140,6 +153,9 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "EFE6834C-48CD-85D0-C675-7B9EC7948A73";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
+createNode polyCube -n "polyCube1";
+	rename -uid "DD8865E9-40F5-903F-C260-1CB51F0DAD87";
+	setAttr ".cuv" 4;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -172,6 +188,7 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
+connectAttr "polyCube1.out" "pCubeShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -179,4 +196,5 @@ relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":default
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 // End of Tardis.ma
