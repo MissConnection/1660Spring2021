@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Tardis.ma
-//Last modified: Wed, Feb 24, 2021 12:20:57 PM
+//Last modified: Fri, Feb 26, 2021 11:20:55 AM
 //Codeset: 1252
 requires maya "2020";
 requires "stereoCamera" "10.0";
@@ -12,12 +12,12 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
-fileInfo "UUID" "B858A65A-4444-EB4B-2331-25BD9BAB2E8A";
+fileInfo "UUID" "3522BC7F-46D7-0C7D-CD04-518164EF1F4D";
 createNode transform -s -n "persp";
 	rename -uid "5CD52AA3-49F3-C7E8-725E-2682D7BA7BD2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.6838147625924944 1.8725834459642066 -3.3402792527269169 ;
-	setAttr ".r" -type "double3" -15.938352796706885 -587.79999999984705 360.00000000010556 ;
+	setAttr ".t" -type "double3" 0.22687714818008775 1.7681311744596497 -4.9962227663859986 ;
+	setAttr ".r" -type "double3" -14.738352796655054 -542.59999999938691 359.99999999990587 ;
 	setAttr ".rp" -type "double3" -2.2204460492503131e-16 -5.5511151231257827e-17 0 ;
 	setAttr ".rpt" -type "double3" 4.4413911287761393e-16 1.9772755460451434e-18 -1.3908564942267924e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -290,13 +290,13 @@ createNode mesh -n "pasted__pCubeShape5" -p "|group|pasted__pCube5";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.5 ;
+	setAttr ".pv" -type "double2" 0.75 0.125 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 7 ".pt[1:7]" -type "float3"  -0.90445423 0 0 0 0.86852205 
+	setAttr -s 8 ".pt[1:7]" -type "float3"  -0.90445423 0 0 0 0.86852205 
 		0 -0.90445423 0.86852205 0 0 0.86852205 -0.041239336 -0.90445423 0.86852205 -0.041239336 
 		0 0 -0.041239336 -0.90445423 0 -0.041239336;
 	setAttr ".ai_translator" -type "string" "polymesh";
@@ -307,7 +307,7 @@ createNode transform -n "group1";
 	setAttr ".sp" -type "double3" -0.45653690574248129 0.4342610239982605 -0.022361159324645996 ;
 createNode transform -n "pasted__pCube5" -p "group1";
 	rename -uid "1EB88546-4B43-D851-6A80-EFB206BD5A08";
-	setAttr ".t" -type "double3" -0.9638838851681002 0 0.0075007945412157162 ;
+	setAttr ".t" -type "double3" -0.9638838851681002 0 -0.0035873076063384635 ;
 	setAttr ".r" -type "double3" 1.7996194894567208 -89.431540960997665 -2.0101083699891191 ;
 createNode mesh -n "pasted__pCubeShape5" -p "|group1|pasted__pCube5";
 	rename -uid "4700DE1E-4833-2A3C-B9B1-0F9D028FFF6A";
@@ -320,10 +320,11 @@ createNode mesh -n "pasted__pCubeShape5" -p "|group1|pasted__pCube5";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.0001670927 0 0.0044705193 
-		-0.9042871 0 0.0044705193 0.0001670927 0.86852205 0.0044705193 -0.9042871 0.86852205 
-		0.0044705193 -0.0013475867 0.86852205 -0.080776595 -0.90580177 0.86852205 -0.080776595 
-		-0.0013475867 0 -0.080776595 -0.90580177 0 -0.080776595;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.00025763264 3.3560318e-05 
+		-0.0046603833 -0.90419662 3.3560318e-05 -0.0046603833 0.00025763264 0.86855555 -0.0046603833 
+		-0.90419662 0.86855555 -0.0046603833 -0.0011212901 0.86860603 -0.10359847 -0.90557539 
+		0.86860603 -0.10359847 -0.0011212901 8.388103e-05 -0.10359847 -0.90557539 8.388103e-05 
+		-0.10359847;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pasted__group" -p "group1";
 	rename -uid "D283D36E-4B80-44BB-9D39-018206439A1B";
@@ -450,23 +451,24 @@ createNode transform -n "pasted__group1" -p "group4";
 	setAttr ".sp" -type "double3" -0.45653690574248129 0.4342610239982605 -0.022361159324645996 ;
 createNode transform -n "pasted__pasted__pCube5" -p "|group4|pasted__group1";
 	rename -uid "F1169204-4112-AD70-BEC3-89A19E0720D9";
-	setAttr ".t" -type "double3" -0.9638838851681002 0 0.0075007945412157162 ;
+	setAttr ".t" -type "double3" -0.9638838851681002 0 -0.017321324831325813 ;
 	setAttr ".r" -type "double3" 1.5984519731969753 -89.345545520189418 -1.8156249080086722 ;
 createNode mesh -n "pasted__pasted__pCubeShape5" -p "|group4|pasted__group1|pasted__pasted__pCube5";
 	rename -uid "0B2A239A-4CC3-B332-D271-EE9C232A2576";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.125 ;
+	setAttr ".pv" -type "double2" 0.5 0.625 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.0001670927 0 0.0044705193 
-		-0.9042871 0 0.0044705193 0.0001670927 0.86852205 0.0044705193 -0.9042871 0.86852205 
-		0.0044705193 -0.0013475867 0.86852205 -0.080776595 -0.90580177 0.86852205 -0.080776595 
-		-0.0013475867 0 -0.080776595 -0.90580177 0 -0.080776595;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.0003231446 5.183585e-05 
+		-0.0091975899 -0.904131 5.183585e-05 -0.0091975899 0.0003231446 0.8685739 -0.0091975899 
+		-0.904131 0.8685739 -0.0091975899 -0.0011393656 0.86859119 -0.099014036 -0.90559363 
+		0.86859119 -0.099014036 -0.0011393656 6.9164904e-05 -0.099014036 -0.90559363 6.9164904e-05 
+		-0.099014036;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "3C68C744-46C3-E9C6-A6C6-2CAC8D12A75D";
@@ -961,8 +963,8 @@ createNode polyCube -n "pasted__pasted__polyCube8";
 	rename -uid "E2085081-45C3-5C88-108D-DE8D9C012967";
 	setAttr ".cuv" 4;
 select -ne :time1;
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 34;
+	setAttr ".unw" 34;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
