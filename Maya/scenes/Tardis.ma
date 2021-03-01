@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Tardis.ma
-//Last modified: Sat, Feb 27, 2021 03:41:03 PM
+//Last modified: Mon, Mar 01, 2021 01:28:39 PM
 //Codeset: 1252
 requires maya "2020";
 requires "stereoCamera" "10.0";
@@ -12,12 +12,12 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
-fileInfo "UUID" "44B46218-4596-5A4F-5470-D1B2A7A897BB";
+fileInfo "UUID" "5407F8B4-4FB2-B04E-159E-C1BB14B7109D";
 createNode transform -s -n "persp";
 	rename -uid "5CD52AA3-49F3-C7E8-725E-2682D7BA7BD2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.71334026031101239 1.768131174463718 4.9502384634212042 ;
-	setAttr ".r" -type "double3" -14.738352796693494 -351.79999999337713 360.00000000000045 ;
+	setAttr ".t" -type "double3" -4.0492126533414146 2.6819906808684064 2.3190059527102678 ;
+	setAttr ".r" -type "double3" -25.538352796574056 -420.19999999334999 359.99999999988404 ;
 	setAttr ".rp" -type "double3" -2.2204460492503131e-16 -5.5511151231257827e-17 0 ;
 	setAttr ".rpt" -type "double3" 4.4413911287761393e-16 1.9772755460451434e-18 -1.3908564942267924e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -278,7 +278,7 @@ createNode mesh -n "pasted__pCubeShape5" -p "|group|pasted__pCube5";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[1:7]" -type "float3"  -0.90445423 0 0 0 0.86852205 
+	setAttr -s 7 ".pt[1:7]" -type "float3"  -0.90445423 0 0 0 0.86852205 
 		0 -0.90445423 0.86852205 0 0 0.86852205 -0.041239336 -0.90445423 0.86852205 -0.041239336 
 		0 0 -0.041239336 -0.90445423 0 -0.041239336;
 	setAttr ".ai_translator" -type "string" "polymesh";
@@ -440,32 +440,30 @@ createNode mesh -n "pasted__pasted__pCubeShape5" -p "|group4|pasted__group1|past
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.625 ;
+	setAttr ".pv" -type "double2" 0.75 0.125 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.0003231446 5.183585e-05 
-		-0.0091975899 -0.904131 5.183585e-05 -0.0091975899 0.0003231446 0.8685739 -0.0091975899 
-		-0.904131 0.8685739 -0.0091975899 -0.0011393656 0.86859119 -0.099014036 -0.90559363 
-		0.86859119 -0.099014036 -0.0011393656 6.9164904e-05 -0.099014036 -0.90559363 6.9164904e-05 
-		-0.099014036;
+	setAttr -s 4 ".pt[8:11]" -type "float3"  0.0003908583 0.4993014 0.29122049 
+		-0.00039083092 0.49931076 -0.29122049 0.00039083022 -0.49931079 0.29122049 -0.00039085912 
+		-0.49930143 -0.29122043;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "3C68C744-46C3-E9C6-A6C6-2CAC8D12A75D";
+	rename -uid "42AB84FB-4C00-3052-DFF7-41BFFC79B68C";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "DC52D2A5-4C4A-B493-14DF-6CB75F780EAE";
+	rename -uid "8DA5CCF2-4E37-540A-0EDA-22A1DCFAB3BA";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "35EB04BD-40D8-DBDD-F6E5-74A1066B46DA";
+	rename -uid "C44147E0-46D0-1FCD-4948-63A96EA56858";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "00F4EB7F-4399-5944-B1F1-4AAA8FC0FE5B";
+	rename -uid "523F6698-4C43-A748-58C1-8B80BAC7A6FD";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "C9FF0438-4CB8-4A8E-8008-8B8FD96002CD";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "87250F8B-49FA-6E6B-7951-4AB640C721F2";
+	rename -uid "D748DDA3-4C26-E8BC-198A-41B3526BE85A";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "DAF62C49-48CE-6740-0353-D28103282DAE";
 	setAttr ".g" yes;
@@ -901,6 +899,27 @@ createNode polyCube -n "polyCube6";
 createNode polyCube -n "pasted__pasted__polyCube8";
 	rename -uid "E2085081-45C3-5C88-108D-DE8D9C012967";
 	setAttr ".cuv" 4;
+createNode polyExtrudeFace -n "polyExtrudeFace2";
+	rename -uid "534BDB44-4E05-C423-B6B4-91B682F38397";
+	setAttr ".ics" -type "componentList" 1 "f[4]";
+	setAttr ".ix" -type "matrix" 0.011416402696665107 -0.00036189133248005833 0.99993476526428038 0
+		 0.0037921924679373315 0.99999275885375249 0.00031861630050491991 0 -0.99992763989488476 0.0037883076332716008 0.011417692390408796 0
+		 -0.055041425886611428 0 0.90710802584882888 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -0.003914563 0.43425992 0.50179273 ;
+	setAttr ".rs" 49375;
+	setAttr ".lt" -type "double3" 1.0842021724855044e-19 1.656118818471608e-17 0.067160560341301245 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -0.55231794052068461 -0.50204967739156015 0.4945422067896782 ;
+	setAttr ".cbx" -type "double3" 0.54448881414929384 1.370569556003931 0.50904327481880418 ;
+createNode polyTweak -n "polyTweak5";
+	rename -uid "C9094B24-4112-FE21-63EA-E29871610CB5";
+	setAttr ".uopa" yes;
+	setAttr -s 8 ".tk[0:7]" -type "float3"  0.0003231446 5.183585e-05
+		 -0.0091975899 -0.904131 5.183585e-05 -0.0091975899 0.0003231446 0.8685739 -0.0091975899
+		 -0.904131 0.8685739 -0.0091975899 -0.0011393656 0.86859119 -0.099014036 -0.90559363
+		 0.86859119 -0.099014036 -0.0011393656 6.9164904e-05 -0.099014036 -0.90559363 6.9164904e-05
+		 -0.099014036;
 select -ne :time1;
 	setAttr ".o" 34;
 	setAttr ".unw" 34;
@@ -955,7 +974,7 @@ connectAttr "pasted__pasted__polyCube6.out" "|group2|pasted__group|pasted__paste
 connectAttr "pasted__pasted__polyCube7.out" "|group3|pasted__group1|pasted__pasted__pCube5|pasted__pasted__pCubeShape5.i"
 		;
 connectAttr "polyCube6.out" "pCubeShape6.i";
-connectAttr "pasted__pasted__polyCube8.out" "|group4|pasted__group1|pasted__pasted__pCube5|pasted__pasted__pCubeShape5.i"
+connectAttr "polyExtrudeFace2.out" "|group4|pasted__group1|pasted__pasted__pCube5|pasted__pasted__pCubeShape5.i"
 		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
@@ -1055,6 +1074,10 @@ connectAttr "deleteComponent70.og" "deleteComponent71.ig";
 connectAttr "deleteComponent71.og" "deleteComponent72.ig";
 connectAttr "deleteComponent72.og" "deleteComponent73.ig";
 connectAttr "deleteComponent73.og" "deleteComponent74.ig";
+connectAttr "polyTweak5.out" "polyExtrudeFace2.ip";
+connectAttr "|group4|pasted__group1|pasted__pasted__pCube5|pasted__pasted__pCubeShape5.wm" "polyExtrudeFace2.mp"
+		;
+connectAttr "pasted__pasted__polyCube8.out" "polyTweak5.ip";
 connectAttr "shadingMap1SG.pa" ":renderPartition.st" -na;
 connectAttr "shadingMap1.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
