@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Tardis.ma
-//Last modified: Mon, Mar 01, 2021 01:28:39 PM
+//Last modified: Tue, Mar 02, 2021 02:03:53 PM
 //Codeset: 1252
 requires maya "2020";
 requires "stereoCamera" "10.0";
@@ -12,12 +12,12 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
-fileInfo "UUID" "5407F8B4-4FB2-B04E-159E-C1BB14B7109D";
+fileInfo "UUID" "E19A2FD3-4E1B-2430-54A8-1B91F5971299";
 createNode transform -s -n "persp";
 	rename -uid "5CD52AA3-49F3-C7E8-725E-2682D7BA7BD2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -4.0492126533414146 2.6819906808684064 2.3190059527102678 ;
-	setAttr ".r" -type "double3" -25.538352796574056 -420.19999999334999 359.99999999988404 ;
+	setAttr ".t" -type "double3" 0.69833959120823064 0.9695463180823668 5.0980033380795966 ;
+	setAttr ".r" -type "double3" -5.7383527967152608 -352.19999999326973 359.99999999996282 ;
 	setAttr ".rp" -type "double3" -2.2204460492503131e-16 -5.5511151231257827e-17 0 ;
 	setAttr ".rpt" -type "double3" 4.4413911287761393e-16 1.9772755460451434e-18 -1.3908564942267924e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -446,9 +446,31 @@ createNode mesh -n "pasted__pasted__pCubeShape5" -p "|group4|pasted__group1|past
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 4 ".pt[8:11]" -type "float3"  0.0003908583 0.4993014 0.29122049 
-		-0.00039083092 0.49931076 -0.29122049 0.00039083022 -0.49931079 0.29122049 -0.00039085912 
-		-0.49930143 -0.29122043;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.0003231446 5.183585e-05 
+		-0.0091975899 -0.904131 5.183585e-05 -0.0091975899 0.0003231446 0.8685739 -0.0091975899 
+		-0.904131 0.8685739 -0.0091975899 -0.0011393656 0.86859119 -0.099014036 -0.90559363 
+		0.86859119 -0.099014036 -0.0011393656 6.9164904e-05 -0.099014036 -0.90559363 6.9164904e-05 
+		-0.099014036;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "pCube7";
+	rename -uid "60DF3CF8-4716-8101-ED9B-F1A040B5C67F";
+	setAttr ".t" -type "double3" 0 0.75137761977468687 0 ;
+	setAttr ".s" -type "double3" 1.0778029651731462 1.0778029651731462 1.0778029651731462 ;
+createNode mesh -n "pCubeShape7" -p "pCube7";
+	rename -uid "C6C32F0F-4B7B-D712-8A7C-56BF01613382";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.375 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0.22186102 0.40796193 0 -0.19795674 
+		0.40796193 0 0.22186102 -0.046245806 0 -0.19795674 -0.046245806 0 0.22186102 -0.046245806 
+		0.88526553 -0.19795674 -0.046245806 0.88526553 0.22186102 0.40796193 0.88526553 -0.19795674 
+		0.40796193 0.88526553;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "42AB84FB-4C00-3052-DFF7-41BFFC79B68C";
@@ -899,27 +921,9 @@ createNode polyCube -n "polyCube6";
 createNode polyCube -n "pasted__pasted__polyCube8";
 	rename -uid "E2085081-45C3-5C88-108D-DE8D9C012967";
 	setAttr ".cuv" 4;
-createNode polyExtrudeFace -n "polyExtrudeFace2";
-	rename -uid "534BDB44-4E05-C423-B6B4-91B682F38397";
-	setAttr ".ics" -type "componentList" 1 "f[4]";
-	setAttr ".ix" -type "matrix" 0.011416402696665107 -0.00036189133248005833 0.99993476526428038 0
-		 0.0037921924679373315 0.99999275885375249 0.00031861630050491991 0 -0.99992763989488476 0.0037883076332716008 0.011417692390408796 0
-		 -0.055041425886611428 0 0.90710802584882888 1;
-	setAttr ".ws" yes;
-	setAttr ".pvt" -type "float3" -0.003914563 0.43425992 0.50179273 ;
-	setAttr ".rs" 49375;
-	setAttr ".lt" -type "double3" 1.0842021724855044e-19 1.656118818471608e-17 0.067160560341301245 ;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" -0.55231794052068461 -0.50204967739156015 0.4945422067896782 ;
-	setAttr ".cbx" -type "double3" 0.54448881414929384 1.370569556003931 0.50904327481880418 ;
-createNode polyTweak -n "polyTweak5";
-	rename -uid "C9094B24-4112-FE21-63EA-E29871610CB5";
-	setAttr ".uopa" yes;
-	setAttr -s 8 ".tk[0:7]" -type "float3"  0.0003231446 5.183585e-05
-		 -0.0091975899 -0.904131 5.183585e-05 -0.0091975899 0.0003231446 0.8685739 -0.0091975899
-		 -0.904131 0.8685739 -0.0091975899 -0.0011393656 0.86859119 -0.099014036 -0.90559363
-		 0.86859119 -0.099014036 -0.0011393656 6.9164904e-05 -0.099014036 -0.90559363 6.9164904e-05
-		 -0.099014036;
+createNode polyCube -n "polyCube7";
+	rename -uid "7670703C-45BC-C5A0-D83E-12A77F9D25A1";
+	setAttr ".cuv" 4;
 select -ne :time1;
 	setAttr ".o" 34;
 	setAttr ".unw" 34;
@@ -938,7 +942,7 @@ select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
 select -ne :initialShadingGroup;
-	setAttr -s 15 ".dsm";
+	setAttr -s 16 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -974,8 +978,9 @@ connectAttr "pasted__pasted__polyCube6.out" "|group2|pasted__group|pasted__paste
 connectAttr "pasted__pasted__polyCube7.out" "|group3|pasted__group1|pasted__pasted__pCube5|pasted__pasted__pCubeShape5.i"
 		;
 connectAttr "polyCube6.out" "pCubeShape6.i";
-connectAttr "polyExtrudeFace2.out" "|group4|pasted__group1|pasted__pasted__pCube5|pasted__pasted__pCubeShape5.i"
+connectAttr "pasted__pasted__polyCube8.out" "|group4|pasted__group1|pasted__pasted__pCube5|pasted__pasted__pCubeShape5.i"
 		;
+connectAttr "polyCube7.out" "pCubeShape7.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "shadingMap1SG.message" ":defaultLightSet.message";
@@ -1074,10 +1079,6 @@ connectAttr "deleteComponent70.og" "deleteComponent71.ig";
 connectAttr "deleteComponent71.og" "deleteComponent72.ig";
 connectAttr "deleteComponent72.og" "deleteComponent73.ig";
 connectAttr "deleteComponent73.og" "deleteComponent74.ig";
-connectAttr "polyTweak5.out" "polyExtrudeFace2.ip";
-connectAttr "|group4|pasted__group1|pasted__pasted__pCube5|pasted__pasted__pCubeShape5.wm" "polyExtrudeFace2.mp"
-		;
-connectAttr "pasted__pasted__polyCube8.out" "polyTweak5.ip";
 connectAttr "shadingMap1SG.pa" ":renderPartition.st" -na;
 connectAttr "shadingMap1.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
@@ -1103,4 +1104,5 @@ connectAttr "|group3|pasted__group1|pasted__pasted__pCube5|pasted__pasted__pCube
 connectAttr "pCubeShape6.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "|group4|pasted__group1|pasted__pasted__pCube5|pasted__pasted__pCubeShape5.iog" ":initialShadingGroup.dsm"
 		 -na;
+connectAttr "pCubeShape7.iog" ":initialShadingGroup.dsm" -na;
 // End of Tardis.ma
