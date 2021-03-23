@@ -1,22 +1,21 @@
 //Maya ASCII 2020 scene
 //Name: Tardis.ma
-//Last modified: Fri, Mar 19, 2021 01:39:41 PM
+//Last modified: Tue, Mar 23, 2021 01:41:06 PM
 //Codeset: 1252
 requires maya "2020";
 requires "stereoCamera" "10.0";
 requires "mtoa" "4.0.0";
-requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
-fileInfo "UUID" "95CBD051-4EA0-3E52-17D0-6DA4BA774680";
+fileInfo "UUID" "DE18A8EB-4814-7BF6-56EC-07ABEFFFCFB4";
 createNode transform -s -n "persp";
 	rename -uid "5CD52AA3-49F3-C7E8-725E-2682D7BA7BD2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.28085492559317737 0.90033993176267035 3.1986875072531671 ;
+	setAttr ".t" -type "double3" -0.96421514531830654 1.0444050793212822 4.6111794630980647 ;
 	setAttr ".r" -type "double3" -8.1383527940448204 -372.99999994584982 359.99999998892378 ;
 	setAttr ".rp" -type "double3" -2.2204460492503131e-16 -5.5511151231257827e-17 0 ;
 	setAttr ".rpt" -type "double3" 4.4413911287761393e-16 1.9772755460451434e-18 -1.3908564942267924e-17 ;
@@ -24,11 +23,11 @@ createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C86DD37F-4497-CDB8-2513-3D90233B9233";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 3.2923569610939181;
+	setAttr ".coi" 4.3099113550910788;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0.45230555353900748 0.4342610239982605 0.023020565831258749 ;
+	setAttr ".tp" -type "double3" -0.0044599573313966467 0.43427719808607435 0.45402300267771373 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
@@ -891,7 +890,7 @@ createNode transform -n "pasted__pasted__pasted__group6" -p "|group18|pasted__gr
 	setAttr ".sp" -type "double3" 0.012882043295317724 1.2136145517857249 0.47707090614481074 ;
 createNode transform -n "pasted__pasted__pasted__pasted__pCube7" -p "|group18|pasted__group16|pasted__pasted__group15|pasted__pasted__pasted__group6";
 	rename -uid "27BB2E7D-4C98-328E-A74F-C5B8F41BBE0A";
-	setAttr ".t" -type "double3" 0 -0.27799517751365332 0 ;
+	setAttr ".t" -type "double3" 0 -0.095171405917014562 0 ;
 	setAttr ".s" -type "double3" 1.0778029651731462 1.0778029651731462 1.0778029651731462 ;
 createNode mesh -n "pasted__pasted__pasted__pasted__pCubeShape7" -p "|group18|pasted__group16|pasted__pasted__group15|pasted__pasted__pasted__group6|pasted__pasted__pasted__pasted__pCube7";
 	rename -uid "0D4F64AB-4941-B9B5-E51B-19823DE48425";
@@ -950,19 +949,19 @@ createNode mesh -n "pasted__pasted__pasted__pasted__pCubeShape7" -p "|group19|pa
 		0.92553937 0.88526553;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "AF70372B-4730-FFCD-C6D6-6EAD9C5C5259";
+	rename -uid "AB00EA0D-4312-DB73-87E0-F8A6AE302D10";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "E947979E-4FA9-4E5D-BEE4-05A1BB0C9AEB";
+	rename -uid "DFC73DBE-4963-09EB-AB08-BAB0D160F1D8";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "6881E77E-49B5-420F-AB08-B3A43C8F2C9B";
+	rename -uid "8ED24B38-40DA-A41D-ACFA-93ACED42E291";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "E4CC2B15-4CD3-95D8-E3E5-DAAAE41D0B0C";
+	rename -uid "4F065FAE-440D-2258-4010-669ACF658D34";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "C9FF0438-4CB8-4A8E-8008-8B8FD96002CD";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "82ECDCAD-4E0A-46C8-3438-9F931780F2D7";
+	rename -uid "35BA3B00-4DC7-3DC5-7ADB-BA90E0449936";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "DAF62C49-48CE-6740-0353-D28103282DAE";
 	setAttr ".g" yes;
