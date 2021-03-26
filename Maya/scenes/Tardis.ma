@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Tardis.ma
-//Last modified: Thu, Mar 25, 2021 01:22:59 PM
+//Last modified: Fri, Mar 26, 2021 01:47:32 AM
 //Codeset: 1252
 requires maya "2020";
 requires "stereoCamera" "10.0";
@@ -13,23 +13,23 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
-fileInfo "UUID" "828E15B9-418E-61A8-0D2B-09B0F64FCFCE";
+fileInfo "UUID" "8E613A82-4736-C885-58C6-C1A457B61656";
 createNode transform -s -n "persp";
 	rename -uid "5CD52AA3-49F3-C7E8-725E-2682D7BA7BD2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.019158971222029253 -3.8683204985951067 0.70388515561763443 ;
-	setAttr ".r" -type "double3" 86.66164720482854 -714.59999999994909 360.0000000152076 ;
+	setAttr ".t" -type "double3" 1.4041888553444788 0.32419917356297412 6.0395199448645442 ;
+	setAttr ".r" -type "double3" -6.9383527918542018 -702.59999999986758 360.00000001588347 ;
 	setAttr ".rp" -type "double3" -2.2204460492503131e-16 -5.5511151231257827e-17 0 ;
 	setAttr ".rpt" -type "double3" 4.4413911287761393e-16 1.9772755460451434e-18 -1.3908564942267924e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C86DD37F-4497-CDB8-2513-3D90233B9233";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 4.3099113550910788;
+	setAttr ".coi" 2.6837380823004384;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -0.0044599573313966467 0.43427719808607435 0.45402300267771373 ;
+	setAttr ".tp" -type "double3" 0.60751898509858293 0 3.4973432971681055 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
@@ -956,12 +956,6 @@ createNode mesh -n "pasted__pasted__pasted__pasted__pCubeShape7" -p "|group19|pa
 		0.88526553 -0.19795674 -0.046245806 0.88526553 0.22186102 0.92553937 0.88526553 -0.19795674 
 		0.92553937 0.88526553;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode joint -n "joint1";
-	rename -uid "54A07763-4551-E83C-9BBA-99A290DBC065";
-	setAttr ".t" -type "double3" -2.7753558718113931 0 -0.64037413725516767 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".radi" 0.5;
 createNode transform -n "group20";
 	rename -uid "D455F81E-4DC0-3ACE-3547-8CA8F8026BF2";
 	setAttr ".rp" -type "double3" 0.012882043295317724 0.6152667964698576 0.47707090614481074 ;
