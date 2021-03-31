@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Tardis.ma
-//Last modified: Tue, Mar 30, 2021 01:01:02 PM
+//Last modified: Wed, Mar 31, 2021 12:44:59 PM
 //Codeset: 1252
 requires maya "2020";
 requires "stereoCamera" "10.0";
@@ -13,11 +13,11 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
-fileInfo "UUID" "3101773B-45E3-409A-9DE4-AB8509A6E929";
+fileInfo "UUID" "3651BC8C-4ED0-7CF2-1F54-1BBA07BF0328";
 createNode transform -s -n "persp";
 	rename -uid "5CD52AA3-49F3-C7E8-725E-2682D7BA7BD2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.088967656451281546 0.53444715231627138 1.2488200697601495 ;
+	setAttr ".t" -type "double3" 0.41226778804223246 -0.67908586051371256 4.5098029279474012 ;
 	setAttr ".r" -type "double3" 15.261647204904923 -714.19999999985328 360.00000001505498 ;
 	setAttr ".rp" -type "double3" -2.2204460492503131e-16 -5.5511151231257827e-17 0 ;
 	setAttr ".rpt" -type "double3" 4.4413911287761393e-16 1.9772755460451434e-18 -1.3908564942267924e-17 ;
@@ -25,11 +25,11 @@ createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C86DD37F-4497-CDB8-2513-3D90233B9233";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 0.80407701489886052;
+	setAttr ".coi" 4.2296572511515151;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0.010576235053504718 0.74610220044632847 0.47707090614481074 ;
+	setAttr ".tp" -type "double3" -9.1771800291656769e-05 0.43427553706171385 0.45019870413272423 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
@@ -513,7 +513,7 @@ createNode transform -n "group6";
 	setAttr ".sp" -type "double3" 0.012882043295317724 1.2136145517857249 0.47707090614481074 ;
 createNode transform -n "pasted__pCube7" -p "group6";
 	rename -uid "BA221FAB-4367-35D0-5319-568EB4F13B7B";
-	setAttr ".t" -type "double3" 0 0.75922595551208072 0 ;
+	setAttr ".t" -type "double3" 0 0.76397590691432271 0 ;
 	setAttr ".s" -type "double3" 1.0778029651731462 1.0778029651731462 1.0778029651731462 ;
 createNode mesh -n "pasted__pCubeShape7" -p "|group6|pasted__pCube7";
 	rename -uid "C374DB42-4FD2-5565-347C-93A25E4EB11D";
@@ -756,7 +756,7 @@ createNode transform -n "pasted__group6" -p "group15";
 	setAttr ".sp" -type "double3" 0.012882043295317724 1.2136145517857249 0.47707090614481074 ;
 createNode transform -n "pasted__pasted__pCube7" -p "|group15|pasted__group6";
 	rename -uid "561D5757-4E63-6DE7-01D4-CB9F38E4F9D4";
-	setAttr ".t" -type "double3" 0 -0.28280744139707936 0 ;
+	setAttr ".t" -type "double3" 0 -0.29527412371438277 0 ;
 	setAttr ".s" -type "double3" 1.0778029651731462 1.0778029651731462 1.0778029651731462 ;
 createNode mesh -n "pasted__pasted__pCubeShape7" -p "|group15|pasted__group6|pasted__pasted__pCube7";
 	rename -uid "37860E0F-47EF-5786-B8BE-E3B00F2897FA";
