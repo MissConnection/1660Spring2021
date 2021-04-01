@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Tardis.ma
-//Last modified: Wed, Mar 31, 2021 12:44:59 PM
+//Last modified: Thu, Apr 01, 2021 01:53:25 AM
 //Codeset: 1252
 requires maya "2020";
 requires "stereoCamera" "10.0";
@@ -13,7 +13,7 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
-fileInfo "UUID" "3651BC8C-4ED0-7CF2-1F54-1BBA07BF0328";
+fileInfo "UUID" "A2600FF6-488B-9C48-F97C-AEB130FC72DC";
 createNode transform -s -n "persp";
 	rename -uid "5CD52AA3-49F3-C7E8-725E-2682D7BA7BD2";
 	setAttr ".v" no;
@@ -1078,6 +1078,20 @@ createNode joint -n "joint1";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.5;
+createNode transform -n "pPlane1";
+	rename -uid "4123A3CB-4308-D94E-4F6D-458BBD0398FF";
+	setAttr ".t" -type "double3" 0 -0.50036200940015063 0 ;
+createNode mesh -n "pPlaneShape1" -p "pPlane1";
+	rename -uid "8FD6C024-4C82-65F2-3DAD-FF928BDECB10";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "0C2B179F-437A-27B6-8039-788EA838501F";
 	setAttr -s 3 ".lnk";
@@ -1578,6 +1592,9 @@ createNode polyCube -n "pasted__pasted__polyCube14";
 createNode polyCube -n "pasted__pasted__polyCube15";
 	rename -uid "D168F421-4A9D-952F-2176-13AE18E35F96";
 	setAttr ".cuv" 4;
+createNode polyPlane -n "polyPlane1";
+	rename -uid "926C2A63-47C2-7668-E6F6-1E9C342309F5";
+	setAttr ".cuv" 2;
 select -ne :time1;
 	setAttr ".o" 34;
 	setAttr ".unw" 34;
@@ -1596,7 +1613,7 @@ select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
 select -ne :initialShadingGroup;
-	setAttr -s 32 ".dsm";
+	setAttr -s 33 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -1669,6 +1686,7 @@ connectAttr "pasted__pasted__polyCube14.out" "|group22|pasted__group1|pasted__pa
 		;
 connectAttr "pasted__pasted__polyCube15.out" "|group23|pasted__group1|pasted__pasted__pCube5|pasted__pasted__pCubeShape5.i"
 		;
+connectAttr "polyPlane1.out" "pPlaneShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "shadingMap1SG.message" ":defaultLightSet.message";
@@ -1825,4 +1843,5 @@ connectAttr "|group22|pasted__group1|pasted__pasted__pCube5|pasted__pasted__pCub
 		 -na;
 connectAttr "|group23|pasted__group1|pasted__pasted__pCube5|pasted__pasted__pCubeShape5.iog" ":initialShadingGroup.dsm"
 		 -na;
+connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
 // End of Tardis.ma
