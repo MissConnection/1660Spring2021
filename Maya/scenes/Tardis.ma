@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Tardis.ma
-//Last modified: Fri, Apr 02, 2021 01:11:09 PM
+//Last modified: Tue, Apr 06, 2021 12:18:18 PM
 //Codeset: 1252
 requires maya "2020";
 requires "stereoCamera" "10.0";
@@ -13,11 +13,11 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
-fileInfo "UUID" "EBAA1A98-4EA4-69E4-C237-ABB6291D9613";
+fileInfo "UUID" "62270183-4A31-8330-33B9-858839A28312";
 createNode transform -s -n "persp";
 	rename -uid "5CD52AA3-49F3-C7E8-725E-2682D7BA7BD2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 5.4223528533197394 6.306366720321293 9.8672720277865622 ;
+	setAttr ".t" -type "double3" 0.66231225249362158 2.3121899108029229 1.3459961788400854 ;
 	setAttr ".r" -type "double3" -27.938352813246446 -1053.8000000245158 359.99999996228928 ;
 	setAttr ".rp" -type "double3" -2.2204460492503131e-16 -5.5511151231257827e-17 0 ;
 	setAttr ".rpt" -type "double3" 4.4413911287761393e-16 1.9772755460451434e-18 -1.3908564942267924e-17 ;
@@ -25,11 +25,11 @@ createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C86DD37F-4497-CDB8-2513-3D90233B9233";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 10.01671474173677;
+	setAttr ".coi" 1.6980217477871657;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 1.5153400754105648 1.6133226410277628 1.9271736253491536 ;
+	setAttr ".tp" -type "double3" 2.3701745871518298e-08 1.5166305766871044 0 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
@@ -157,7 +157,7 @@ createNode mesh -n "pCubeShape2" -p "pCube2";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube3";
 	rename -uid "3713DE87-450B-56FE-81BA-2E9BE96F04CF";
-	setAttr ".t" -type "double3" 0 1.0775504015319959 0 ;
+	setAttr ".t" -type "double3" 0 1.0881420610352386 0 ;
 	setAttr ".s" -type "double3" 0.79529862011339536 0.79529862011339536 0.79529862011339536 ;
 createNode mesh -n "pCubeShape3" -p "pCube3";
 	rename -uid "8193ED1A-4592-A8F2-89DF-D6BDE4674F91";
