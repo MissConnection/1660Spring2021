@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Tardis.ma
-//Last modified: Thu, Apr 08, 2021 11:20:26 AM
+//Last modified: Fri, Apr 09, 2021 02:01:33 PM
 //Codeset: 1252
 requires maya "2020";
 requires "stereoCamera" "10.0";
@@ -13,19 +13,19 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
-fileInfo "UUID" "B117A1A8-46CE-9A1B-196F-EF828B00F072";
+fileInfo "UUID" "5DE28F1E-45D5-4B6B-4784-74BDFAF20BCB";
 createNode transform -s -n "persp";
 	rename -uid "5CD52AA3-49F3-C7E8-725E-2682D7BA7BD2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 5.207157555732711 1.4884044146720672 3.3301161719329686 ;
-	setAttr ".r" -type "double3" 0.26164720404759229 -1382.6000000015849 360.00000000072885 ;
+	setAttr ".t" -type "double3" 1.6819838249786925 -1.8182857338847391 1.2491514106697721 ;
+	setAttr ".r" -type "double3" 57.86164720396237 -1386.6000000015849 360.00000000065853 ;
 	setAttr ".rp" -type "double3" -2.2204460492503131e-16 -5.5511151231257827e-17 0 ;
 	setAttr ".rpt" -type "double3" 4.4413911287761393e-16 1.9772755460451434e-18 -1.3908564942267924e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C86DD37F-4497-CDB8-2513-3D90233B9233";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 6.1810160975503807;
+	setAttr ".coi" 3.9384153606563093;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1033,12 +1033,6 @@ createNode mesh -n "pasted__pasted__pCubeShape5" -p "|group23|pasted__group1|pas
 		0.86808234 0.03886921 -0.0025339667 -0.00043975405 0.03886921 -0.90698808 -0.00043975405 
 		0.03886921;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode joint -n "joint1";
-	rename -uid "B2C4DD74-4D0D-A2CF-8D29-95B73D12EEA3";
-	setAttr ".t" -type "double3" 0.068202384744109779 0 -1.1216431324498863 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".radi" 0.5;
 createNode transform -n "pPlane1";
 	rename -uid "4123A3CB-4308-D94E-4F6D-458BBD0398FF";
 	setAttr ".t" -type "double3" 0 -0.50036200940015063 0 ;
