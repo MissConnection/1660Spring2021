@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Tardis.ma
-//Last modified: Fri, Apr 09, 2021 02:01:33 PM
+//Last modified: Mon, Apr 12, 2021 03:14:52 PM
 //Codeset: 1252
 requires maya "2020";
 requires "stereoCamera" "10.0";
@@ -13,19 +13,19 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
-fileInfo "UUID" "5DE28F1E-45D5-4B6B-4784-74BDFAF20BCB";
+fileInfo "UUID" "AFC79132-4A1D-81FB-D173-75AAEAD58711";
 createNode transform -s -n "persp";
 	rename -uid "5CD52AA3-49F3-C7E8-725E-2682D7BA7BD2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.6819838249786925 -1.8182857338847391 1.2491514106697721 ;
-	setAttr ".r" -type "double3" 57.86164720396237 -1386.6000000015849 360.00000000065853 ;
+	setAttr ".t" -type "double3" 3.5454082443985566 -1.1460834760113787 2.1641264208069311 ;
+	setAttr ".r" -type "double3" 32.661647204072572 -1381.4000000015558 360.00000000074232 ;
 	setAttr ".rp" -type "double3" -2.2204460492503131e-16 -5.5511151231257827e-17 0 ;
 	setAttr ".rpt" -type "double3" 4.4413911287761393e-16 1.9772755460451434e-18 -1.3908564942267924e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C86DD37F-4497-CDB8-2513-3D90233B9233";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 3.9384153606563093;
+	setAttr ".coi" 4.9339040062667747;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -363,7 +363,10 @@ createNode mesh -n "pasted__pasted__pCubeShape5" -p "|group3|pasted__group1|past
 	setAttr ".pv" -type "double2" 0.5 0.625 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcol" yes;
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".ccls" -type "string" "colorSet1";
+	setAttr ".clst[0].clsn" -type "string" "colorSet1";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr -s 7 ".pt[1:7]" -type "float3"  -0.90445423 0 0 0 0.86852205 
@@ -1619,6 +1622,76 @@ createNode deleteComponent -n "deleteComponent92";
 createNode deleteComponent -n "deleteComponent93";
 	rename -uid "1C32A92C-4795-EEC0-CE53-68B9D407793B";
 	setAttr ".dc" -type "componentList" 1 "f[0]";
+createNode polyColorPerVertex -n "polyColorPerVertex1";
+	rename -uid "21246E67-4BC8-9CA2-BC5B-3A9C84407ED2";
+	setAttr ".uopa" yes;
+	setAttr -s 8 ".vclr";
+	setAttr ".vclr[0].vxal" 1;
+	setAttr -s 3 ".vclr[0].vfcl";
+	setAttr ".vclr[0].vfcl[0].frgb" -type "float3" 0.0055999998 0.014 0.096500002 ;
+	setAttr ".vclr[0].vfcl[0].vfal" 1;
+	setAttr ".vclr[0].vfcl[3].frgb" -type "float3" 0.0055999998 0.014 0.096500002 ;
+	setAttr ".vclr[0].vfcl[3].vfal" 1;
+	setAttr ".vclr[0].vfcl[5].frgb" -type "float3" 0.0055999998 0.014 0.096500002 ;
+	setAttr ".vclr[0].vfcl[5].vfal" 1;
+	setAttr ".vclr[1].vxal" 1;
+	setAttr -s 3 ".vclr[1].vfcl";
+	setAttr ".vclr[1].vfcl[0].frgb" -type "float3" 0.0055999998 0.014 0.096500002 ;
+	setAttr ".vclr[1].vfcl[0].vfal" 1;
+	setAttr ".vclr[1].vfcl[3].frgb" -type "float3" 0.0055999998 0.014 0.096500002 ;
+	setAttr ".vclr[1].vfcl[3].vfal" 1;
+	setAttr ".vclr[1].vfcl[4].frgb" -type "float3" 0.0055999998 0.014 0.096500002 ;
+	setAttr ".vclr[1].vfcl[4].vfal" 1;
+	setAttr ".vclr[2].vxal" 1;
+	setAttr -s 3 ".vclr[2].vfcl";
+	setAttr ".vclr[2].vfcl[0].frgb" -type "float3" 0 0 0 ;
+	setAttr ".vclr[2].vfcl[0].vfal" 1;
+	setAttr ".vclr[2].vfcl[1].frgb" -type "float3" 0 0 0 ;
+	setAttr ".vclr[2].vfcl[1].vfal" 1;
+	setAttr ".vclr[2].vfcl[5].frgb" -type "float3" 0 0 0 ;
+	setAttr ".vclr[2].vfcl[5].vfal" 1;
+	setAttr ".vclr[3].vxal" 1;
+	setAttr -s 3 ".vclr[3].vfcl";
+	setAttr ".vclr[3].vfcl[0].frgb" -type "float3" 0 0 0 ;
+	setAttr ".vclr[3].vfcl[0].vfal" 1;
+	setAttr ".vclr[3].vfcl[1].frgb" -type "float3" 0 0 0 ;
+	setAttr ".vclr[3].vfcl[1].vfal" 1;
+	setAttr ".vclr[3].vfcl[4].frgb" -type "float3" 0 0 0 ;
+	setAttr ".vclr[3].vfcl[4].vfal" 1;
+	setAttr ".vclr[4].vxal" 1;
+	setAttr -s 3 ".vclr[4].vfcl";
+	setAttr ".vclr[4].vfcl[1].frgb" -type "float3" 0 0 0 ;
+	setAttr ".vclr[4].vfcl[1].vfal" 1;
+	setAttr ".vclr[4].vfcl[2].frgb" -type "float3" 0 0 0 ;
+	setAttr ".vclr[4].vfcl[2].vfal" 1;
+	setAttr ".vclr[4].vfcl[5].frgb" -type "float3" 0 0 0 ;
+	setAttr ".vclr[4].vfcl[5].vfal" 1;
+	setAttr ".vclr[5].vxal" 1;
+	setAttr -s 3 ".vclr[5].vfcl";
+	setAttr ".vclr[5].vfcl[1].frgb" -type "float3" 0 0 0 ;
+	setAttr ".vclr[5].vfcl[1].vfal" 1;
+	setAttr ".vclr[5].vfcl[2].frgb" -type "float3" 0 0 0 ;
+	setAttr ".vclr[5].vfcl[2].vfal" 1;
+	setAttr ".vclr[5].vfcl[4].frgb" -type "float3" 0 0 0 ;
+	setAttr ".vclr[5].vfcl[4].vfal" 1;
+	setAttr ".vclr[6].vxal" 1;
+	setAttr -s 3 ".vclr[6].vfcl";
+	setAttr ".vclr[6].vfcl[2].frgb" -type "float3" 0.0055999998 0.014 0.096500002 ;
+	setAttr ".vclr[6].vfcl[2].vfal" 1;
+	setAttr ".vclr[6].vfcl[3].frgb" -type "float3" 0.0055999998 0.014 0.096500002 ;
+	setAttr ".vclr[6].vfcl[3].vfal" 1;
+	setAttr ".vclr[6].vfcl[5].frgb" -type "float3" 0.0055999998 0.014 0.096500002 ;
+	setAttr ".vclr[6].vfcl[5].vfal" 1;
+	setAttr ".vclr[7].vxal" 1;
+	setAttr -s 3 ".vclr[7].vfcl";
+	setAttr ".vclr[7].vfcl[2].frgb" -type "float3" 0.0055999998 0.014 0.096500002 ;
+	setAttr ".vclr[7].vfcl[2].vfal" 1;
+	setAttr ".vclr[7].vfcl[3].frgb" -type "float3" 0.0055999998 0.014 0.096500002 ;
+	setAttr ".vclr[7].vfcl[3].vfal" 1;
+	setAttr ".vclr[7].vfcl[4].frgb" -type "float3" 0.0055999998 0.014 0.096500002 ;
+	setAttr ".vclr[7].vfcl[4].vfal" 1;
+	setAttr ".cn" -type "string" "colorSet1";
+	setAttr ".clam" no;
 select -ne :time1;
 	setAttr ".o" 34;
 	setAttr ".unw" 34;
@@ -1667,7 +1740,7 @@ connectAttr "pasted__pasted__polyCube5.out" "|group1|pasted__group|pasted__paste
 		;
 connectAttr "pasted__pasted__polyCube6.out" "|group2|pasted__group|pasted__pasted__pCube5|pasted__pasted__pCubeShape5.i"
 		;
-connectAttr "pasted__pasted__polyCube7.out" "|group3|pasted__group1|pasted__pasted__pCube5|pasted__pasted__pCubeShape5.i"
+connectAttr "polyColorPerVertex1.out" "|group3|pasted__group1|pasted__pasted__pCube5|pasted__pasted__pCubeShape5.i"
 		;
 connectAttr "polyCube6.out" "pCubeShape6.i";
 connectAttr "pasted__pasted__polyCube8.out" "|group4|pasted__group1|pasted__pasted__pCube5|pasted__pasted__pCubeShape5.i"
@@ -1824,6 +1897,7 @@ connectAttr "deleteComponent89.og" "deleteComponent90.ig";
 connectAttr "deleteComponent90.og" "deleteComponent91.ig";
 connectAttr "deleteComponent91.og" "deleteComponent92.ig";
 connectAttr "deleteComponent92.og" "deleteComponent93.ig";
+connectAttr "pasted__pasted__polyCube7.out" "polyColorPerVertex1.ip";
 connectAttr "shadingMap1SG.pa" ":renderPartition.st" -na;
 connectAttr "shadingMap1.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
